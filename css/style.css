@@ -4,11 +4,48 @@
   box-sizing: border-box;
 }
 
-.navigation-list {
+.header {
+  margin-top: 25px;
+  border-top: 1px solid #ae7c78;
+  border-bottom: 1px solid #ae7c78;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__navigation > a {
+  order: 2;
+}
+
+.header__navigation-list {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
-.navigation-list a {
+.header__navigation-list:first-of-type {
+  margin-left: 120px;
+  order: 1;
+}
+
+.header__navigation-list:last-of-type {
+  margin-right: 120px;
+  order: 3;
+}
+
+.header__navigation-list li {
+  display: inline-block;
+  margin-left: 105px;
+}
+
+.header__navigation-list li:first-child {
+  margin-left: 0;
+}
+
+.header__navigation-list a {
   text-decoration: none;
   color: #ae7c78;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -53,16 +90,60 @@
 }
 
 .features__list {
+  margin-left: 225px;
+  margin-right: 120px;
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
 }
 
+.features__list li {
+  position: relative;
+}
+
+.features__list li::before {
+  content: "";
+  position: absolute;
+}
+
+.features__list li:nth-child(1):before {
+  width: 82px;
+  height: 52px;
+  left: -102px;
+  top: 0;
+  background-image: url("../img/truck.svg");
+  background-repeat: no-repeat;
+}
+
+.features__list li:nth-child(2):before {
+  width: 82px;
+  height: 52px;
+  left: -102px;
+  top: 0;
+  background-image: url("../img/bouquet.svg");
+  background-repeat: no-repeat;
+}
+
+.features__list li:nth-child(3):before {
+  width: 82px;
+  height: 52px;
+  left: -102px;
+  top: 0;
+  background-image: url("../img/camera.svg");
+  background-repeat: no-repeat;
+}
+
 .features__list h3 {
+  margin: 0;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
 }
 
 .features__list p {
+  margin: 0;
+  margin-top: 10px;
+  width: 285px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
