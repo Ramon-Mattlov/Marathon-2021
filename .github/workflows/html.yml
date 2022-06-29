@@ -1,11 +1,6 @@
 name: HTML
 
-on:
-  pull_request:
-  push:
-    branches:
-      - master
-
+on: [push]
 jobs:
   validate:
     runs-on: ubuntu-latest
